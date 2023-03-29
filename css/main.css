@@ -61,3 +61,36 @@ li a:hover:not(.active) {
 .active {
     font-weight: bold;
 }
+
+.statistic-banner {
+    position: absolute;
+    left: 0;
+    background-color: #0062ff;
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-left: 10%;
+}
+
+.section {
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.section span {
+    color: #d1d2d2;
+}
+
+.dash {
+    grid-column: span 1;
+    border-left: 1px solid white;
+    height: 60%;
+    justify-self: center;
+}
