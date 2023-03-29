@@ -1,5 +1,10 @@
 /* Style the navigation bar */
 
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
 nav {
     background-color: transparent;
     overflow: hidden;
@@ -43,4 +48,31 @@ nav a:hover {
 span.logo {
     color: white;
     background-color: orange;
+}
+
+.container {
+    
+}
+
+.landing.satisfaction {
+    color: orange;
+}
+
+.landing.tutoring {
+    color: black;
+    font-size: 100px;
+}
+
+.landing.bank {
+    color: black;
+    font-size: 60px;
+}
+
+.landing.info {
+    color: black;
+    font-size: 30px;
+}
+
+.image-rounded {
+    width: 10%;
 }
