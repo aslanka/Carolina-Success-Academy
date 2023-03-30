@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>Charlotte Success Academy</title>
 
 
 </head>
 
 <body>
+
+    <!-- alert-banner -->
     <header>
-        <div class="alert-banner">
-            <p>Are you a university or school looking for an online tutoring parternship?<span>Talk to us</span> </p>
+        <div class="row">
+            <div class="col-md-12 alert-banner">Are you a university or school looking for an online tutoring parternship?
+                <span>Talk to us</span>
+            </div>
         </div>
+
 
 
         <nav>
             <img src="assets/logo.svg" alt="Logo" class="logo">
             <ul>
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Book Consulting</a></li>
                 <li><a href="#">Camps</a></li>
                 <li><a href="#">Info</a></li>
                 <li><a href="#">Subject</a></li>
@@ -39,30 +45,36 @@
         </nav>
 
     </header>
+
+
+
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4">
+                <!-- this was col-md-4 before, should we make it 6 as it looks a bit more better -->
+                <div class="col-md-6">
                     <div class="landing satisfaction">100% SATISFACTION GARUNTEE</div>
                     <div class="landing tutoring">Get Quality <strong>Tutoring.</strong></div>
                     <div class="landing bank">Without <strong>breaking the bank.</strong></div>
                     <div class="landing info">Private, 1-on-1, or group lessons from instructors who have real experience based on your goals and interests.</div>
                 </div>
-                <div class="col-md-8">
+                <!-- this was col-md-4 before, should we make it 6 as it looks a bit more better -->
+                <div class="col-md-6">
                     <div class="row flex-wrap justify-content-center">
-                      <div class="col-6 col-md-3 mb-4">
-                        <div class="rounded overflow-hidden">
-                          <img src="https://via.placeholder.com/500x500" class="img-rounded" alt="Image 1">
+                        <div class="col-6 col-md-2 mb-4">
+                            <div class="rounded overflow-hidden">
+                                <img src="https://via.placeholder.com/500x500" class="img-rounded" alt="Image 1">
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>                 
+                </div>
             </div>
         </div>
 
 
-    <!-- banner code -->
-        <div class="statistic-banner">
+        <!-- OLD banner code -->
+        <!-- uses css for grid layout -->
+        <!-- <div class="statistic-banner">
             <div class="section">8.200<span><br>Success Stories</span></div>
             <span class="dash"></span>
             <div class="section">10.204<span><br>Expert Instructor</span></div>
@@ -70,7 +82,68 @@
             <div class="section">50.923<span><br>Hours Tutored</span></div>
             <span class="dash"></span>
             <div class="section">72.012<span><br>Active Student</span></div>
-        </div>
+        </div> -->
+
+        <!-- which one is cleaner code -->
+        <!-- NEW  banner code -->
+        <div class="row">
+            <div class="container d-flex align-items-center justify-content-center statistic-banner">
+                <div class="col-md-2 section">8.200<span><br>Success Stories</span></div>
+                <span class="col-md-1 dash"></span>
+                <div class="col-md-2 section">10.204<span><br>Expert Instructor</span></div>
+                <span class="col-md-1 dash"></span>
+                <div class="col-md-2 section">50.923<span><br>Hours Tutored</span></div>
+                <span class="col-md-1 dash"></span>
+                <div class="col-md-3  section">
+                    72.012<span><br>Active Student</span>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- benefits code -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="landing satisfaction text-center align-self-center">Why Choose Us</div>
+                        <div class="text-center align-self-center"><strong>Benefits </strong>of online Tutoring
+                            <br>Services <strong>at
+                                MyTutor</strong>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-3  ">
+                        <div class="col-md-10 benefit-cards-container">
+                            One-on-One Tutoring
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-10 benefit-cards-container">
+                            One-on-One Tutoring
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-10 benefit-cards-container">
+                            One-on-One Tutoring
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="col-md-10 benefit-cards-container">
+                            One-on-One Tutoring
+                        </div>
+                    </div>
+
+                </div>
+            </div>
     </main>
 </body>
 
