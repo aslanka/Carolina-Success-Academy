@@ -63,6 +63,11 @@ span.logo {
     font-size: 100px;
 }
 
+.home.benefits {
+    color: black;
+    font-size: 60px;
+}
+
 .landing.bank {
     color: #ffcf3a;
     font-weight: bold;
