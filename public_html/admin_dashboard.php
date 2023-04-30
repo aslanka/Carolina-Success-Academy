@@ -13,41 +13,55 @@ if ($_SESSION['user_type'] != 'admin') {
 include 'db_connect.php';
 
 
-// Process the form submissions
+// Fetch classes for the upcoming week
+$current_date = date("Y-m-d");
+$next_week_date = date("Y-m-d", strtotime("+1 week"));
+
+$sql = "SELECT * FROM class_events WHERE event_date BETWEEN '$current_date' AND '$next_week_date' ORDER BY event_date, event_time";
+$result = mysqli_query($conn, $sql);
+
+$upcoming_classes = [];
+while ($row = mysqli_fetch_assoc($result)) {
+    $upcoming_classes[] = $row;
+}
+
 
 ?>
 
-<h2>Create New Class</h2>
-<form method="post">
-	<label for="class_name">Class Name:</label>
-	<input type="text" name="class_name" id="class_name" required>
-	<input type="submit" name="add_class" value="Create Class">
-</form>
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Upcoming Classes</h1>
+  </div>
+  
+  <h2>Upcoming Classes this week</h2>
+  <table class="table table-bordered table-striped">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Course ID</th>
+              <th>Teacher ID</th>
+              <th>Event Name</th>
+              <th>Event Date</th>
+              <th>Event Time</th>
+              <th>Event Duration</th>
+              <th>Event Description</th>
+          </tr>
+      </thead>
+      <tbody>
+          <?php foreach ($upcoming_classes as $class) : ?>
+              <tr>
+                  <td><?= $class['id'] ?></td>
+                  <td><?= $class['course_id'] ?></td>
+                  <td><?= $class['teacher_id'] ?></td>
+                  <td><?= $class['event_name'] ?></td>
+                  <td><?= $class['event_date'] ?></td>
+                  <td><?= $class['event_time'] ?></td>
+                  <td><?= $class['event_duration'] ?></td>
+                  <td><?= $class['event_description'] ?></td>
+              </tr>
+          <?php endforeach; ?>
+      </tbody>
+  </table>
 
-<h2>Assign Students to Parents and Tutors</h2>
-<form method="post">
-	<label for="student_id">Student ID:</label>
-	<input type="number" name="student_id" id="student_id" required>
-
-	<label for="parent_id">Parent ID:</label>
-	<input type="number" name="parent_id" id="parent_id" required>
-
-	<label for="tutor_id">Tutor ID:</label>
-	<input type="number" name="tutor_id" id="tutor_id" required>
-
-	<input type="submit" name="assign_students" value="Assign">
-</form>
-
-<h2>Set Class Schedule</h2>
-<form method="post">
-	<label for="class_id">Class ID:</label>
-	<input type="number" name="class_id" id="class_id" required>
-
-	<label for="class_date">Class Date:</label>
-	<input type="date" name="class_date" id="class_date" required>
-
-	<label for="class_time">Class Time:</label>
-	<input type="time" name="class_time" id="class_time" required>
-
-	<input type="submit" name="set_class_schedule" value="Set Schedule">
-</form>
+  <!-- (additional content, if any, can go here) -->
+  <a href="edit_users.php">Edit Users</a>
+  

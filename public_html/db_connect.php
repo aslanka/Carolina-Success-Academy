@@ -2,7 +2,7 @@
 // Database credentials
 $servername = "localhost";
 $username = "u176143505_smirk";
-$password = "Hostpass22!#";
+$password = "o/:o9\$L2k";
 $dbname = "u176143505_CSA";
 
 // Create connection

@@ -43,14 +43,4 @@ $page_title = "Login";
 
 <?php include 'includes/header.php'; ?>
 
-<form method="post" action="login.php">
-	<label for="username">Username:</label>
-	<input type="text" name="username" id="username" required>
-
-	<label for="password">Password:</label>
-	<input type="password" name="password" id="password" required>
-
-	<input type="submit" name="submit" value="Login">
-</form>
-
-<p>Don't have an account? <a href="register.php">Register now.</a></p>
+<?php include 'templates/login.html'; ?>

@@ -17,9 +17,10 @@ $page_title = "Dashboard";
 ?>
 
 <?php include 'includes/header.php'; ?>
+<?php include 'includes/sidebar.php'; ?>
 
-</head>
-<body>
+
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 	<h1>Welcome, <?php echo $username; ?>!</h1>
 	<p>This is your dashboard page.</p>
 	<p>You can add your own content here.</p>
@@ -31,6 +32,7 @@ $page_title = "Dashboard";
     } elseif ($user_type == 'tutor') {
         include 'tutor_dashboard.php';
     } elseif ($user_type == 'student') {
+      echo 'student';
         include 'student_dashboard.php';
     } elseif ($user_type == 'parent') {
         include 'parent_dashboard.php';
@@ -38,5 +40,6 @@ $page_title = "Dashboard";
         echo "<p>Invalid user type.</p>";
     }    
 	?>
+</main>
 </body>
 </html>
